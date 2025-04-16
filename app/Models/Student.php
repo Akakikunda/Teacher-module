@@ -10,7 +10,7 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'class', 'email'
+        'name', 'class', 'email', 'status'
     ];
     public function marks()
 {
@@ -18,4 +18,6 @@ class Student extends Model
 }
 
 }
+
+
 

@@ -1,8 +1,15 @@
-@extends('layouts.app') {{-- Or your dashboard layout --}}
+@extends('layouts.app') {{-- or use @extends('layouts.master') if your layout is named differently --}}
 
 @section('content')
 <div class="container">
     <h1>Registered Students</h1>
+
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <table class="table table-bordered">
         <thead>
             <tr>

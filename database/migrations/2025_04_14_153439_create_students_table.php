@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('class');
-            $table->string('email')->unique();
+            $table->string('status')->default('pending'); // status: pending or approved
             $table->timestamps();
         });
     }

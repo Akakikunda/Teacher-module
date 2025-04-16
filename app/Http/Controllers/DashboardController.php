@@ -12,7 +12,7 @@ class DashboardController extends Controller
         return view('dashboard', ['pageSlug' => 'dashboard']);
     }
 } */
-public function dashboard()
+public function index()
 {
     return view('dashboard'); // again, make sure it's 'resources/views/dashboard.blade.php'
 }

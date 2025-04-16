@@ -35,7 +35,7 @@
   </div>
 </div>
 @endsection-->
-@extends('layouts.app')
+<!--@extends('layouts.app')
 
 @section('content')
 <div class="content">
@@ -76,5 +76,43 @@
         </div>
     </div>
 </div>
+@endsection -->
+
+
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h2>Register New Student</h2>
+
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    <form action="{{ route('students.store') }}" method="POST">
+        @csrf
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label>Class</label>
+            <input type="text" name="class" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Student Email" required>
+                        </div>
+
+
+        {{-- Add more fields here if needed --}}
+
+        <button type="submit" class="btn btn-primary">Register Student</button>
+    </form>
+</div>
 @endsection
+
 
